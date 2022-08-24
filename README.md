@@ -2,7 +2,7 @@ This repository contains analysis code and data for the following manuscript:
 
 Park, Doh, Park, and Ahn "The neurocognitive role of working memory load when Pavlovian motivational control affects instrumental learning"
 
-DOI: https://doi.org/10.1101/2022.08.01.502269
+preprint DOI: https://doi.org/10.1101/2022.08.01.502269
 
 - `code`: code for analysis and plotting
   - `1_task_performance`: behavioral analysis; Figure 2
