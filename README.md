@@ -1,6 +1,5 @@
 "The neurocognitive role of working memory load when Pavlovian motivational control affects instrumental learning"
 
-Heesun Park 2662266@snu.ac.kr
 - `code`: code for analysis and plotting
   - `1_task_performance`: behavioral analysis; Figure 2
   - `2_fit_model`: fit models using Rstan (Hierarchical Bayesian Analysis)
