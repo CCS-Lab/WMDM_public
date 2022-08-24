@@ -1,7 +1,7 @@
 ## -- load packages and set path
 library(rstan)
 library(tidyverse)
-ROOT = '/home/heesun/project/WMDM_public'
+ROOT = 'PATH/TO/YOUR/GIT/project_WMDM_public/'
 PATH_DATA = sprintf('%sdata/', ROOT)
 PATH_STAN = sprintf('%sstanmodel/', ROOT)
 
@@ -12,7 +12,7 @@ INCLUDE_REGRESSOR = 0
 ## -- models and parameters of interest for each model
 models = c("gng",
            "gngwm_ep-1", "gngwm_pi-1", "gngwm_xi-1",
-           "gngwm_pi_ep-1", "gngwm_xi-ep-1", "gngwm_xi_pi-1",
+           "gngwm_pi_ep-1", "gngwm_xi_ep-1", "gngwm_xi_pi-1",
            "gngwm_xi_ep_pi-1")
 
 POIs = list(

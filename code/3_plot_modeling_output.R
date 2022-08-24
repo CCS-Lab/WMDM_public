@@ -7,18 +7,22 @@
 ## -- load packages and set path
 library(rstan)
 library(tidyverse)
-ROOT = '/home/heesun/project/WMDM_public'
+library(ggplot2)
+library(ggridges)
+library(wesanderson) # color palette
+ROOT = 'PATH/TO/YOUR/GIT/project_WMDM_public/'
 PATH_DATA = sprintf('%sdata/', ROOT)
+
 
 ## -- models
 models = c("gng",
            "gngwm_ep-1", "gngwm_pi-1", "gngwm_xi-1",
-           "gngwm_pi_ep-1", "gngwm_xi-ep-1", "gngwm_xi_pi-1",
+           "gngwm_pi_ep-1", "gngwm_xi_ep-1", "gngwm_xi_pi-1",
            "gngwm_xi_ep_pi-1")
 
 model_labels = c('Baseline',
-                 'Separate pi', 'Separate xi', 'Separate ep',
-                 'Separate xi & ep', 'Separate pi & ep', 'Separate xi & pi',
+                 'Separate ep', 'Separate pi', 'Separate xi',
+                 'Separate pi & ep', 'Separate xi & ep', 'Separate xi & pi',
                  'Separate xi & ep & pi')
 
 ## -- define a function for compute Higest-Density Interval (HDI)
@@ -86,7 +90,7 @@ ggplot(looic_df, aes(x=model_label, y=looic_diff)) +
     "Separate ep"=expression(paste("Separate  ", epsilon)),
     "Separate xi" = expression(paste("Separate  ", xi)),
     "Separate xi & ep" = expression(paste("Separate  ",epsilon," & ",xi)),
-    "Separate pi & xi" = expression(paste("Separate  ",pi," & ",xi)),
+    "Separate xi & pi" = expression(paste("Separate  ",pi," & ",xi)),
     "Separate pi & ep" = expression(paste("Separate  ",epsilon," & ",pi)),
     "Separate xi & ep & pi" = expression(paste("Separate  ",epsilon," & ",pi," & ", xi))
     ))+
