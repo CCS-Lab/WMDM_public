@@ -12,7 +12,7 @@ library(wesanderson) # color palette
 
 
 ## -- load data
-ROOT = '/home/heesun/project/project_WMDM/open_access_prep/'
+ROOT = '/home/heesun/project/WMDM_public'
 PATH_DATA = sprintf('%sdata/', ROOT)
 data = read.table(sprintf('%sdata_behav.txt', PATH_DATA), 
                   sep = '\t', header = TRUE)

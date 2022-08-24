@@ -7,7 +7,7 @@
 ## -- load packages and set path
 library(rstan)
 library(tidyverse)
-ROOT = '/home/heesun/project/project_WMDM/open_access_prep/'
+ROOT = '/home/heesun/project/WMDM_public'
 PATH_DATA = sprintf('%sdata/', ROOT)
 
 ## -- models
